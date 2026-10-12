@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact us | Smart Blood Bank</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-page="contact">
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C12 2 5 10.2 5 15.2A7 7 0 0 0 19 15.2C19 10.2 12 2 12 2Z" />
+          </svg>
+        </span>
+        <span>Smart Blood Bank<small>Expiry-aware allocation</small></span>
+      </a>
+      <nav class="nav-links" data-nav></nav>
+    </header>
+
+    <main class="auth-layout">
+      <div class="side-copy">
+        <p class="kicker">Support</p>
+        <h1>Contact the blood bank team</h1>
+        <p class="lede">
+          Use this form for threshold changes, lab clearance questions, or hospital request follow-up.
+          Messages are stored locally in this prototype until the server module is connected.
+        </p>
+        <div class="card">
+          <h3>Campus desk</h3>
+          <p>Foundation University School of Science &amp; Technology · SEN-311L lab</p>
+          <p>Hours: Mon–Fri, 9:00–16:00</p>
+        </div>
+      </div>
+
+      <form class="panel" id="contactForm" novalidate>
+        <div id="formStatus" class="form-status" role="status"></div>
+        <div class="form-row">
+          <div class="field">
+            <label for="fullName">Full name <span class="req">*</span></label>
+            <input id="fullName" name="fullName" type="text" maxlength="60" required />
+            <div class="error" data-error-for="fullName"></div>
+          </div>
+          <div class="field">
+            <label for="email">Email <span class="req">*</span></label>
+            <input id="email" name="email" type="email" required />
+            <div class="error" data-error-for="email"></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="phone">Mobile number</label>
+            <input id="phone" name="phone" type="tel" placeholder="Optional · 03001234567" />
+            <div class="error" data-error-for="phone"></div>
+          </div>
+          <div class="field">
+            <label for="role">Your role <span class="req">*</span></label>
+            <select id="role" name="role" required>
+              <option value="">Select role</option>
+              <option value="ADMIN">Administrator</option>
+              <option value="STAFF">Blood bank staff</option>
+              <option value="LAB_TECHNICIAN">Laboratory technician</option>
+              <option value="HOSPITAL_REQUESTER">Hospital requester</option>
+            </select>
+            <div class="error" data-error-for="role"></div>
+          </div>
+        </div>
+        <div class="field">
+          <label for="subject">Subject <span class="req">*</span></label>
+          <input id="subject" name="subject" type="text" maxlength="80" required />
+          <div class="error" data-error-for="subject"></div>
+        </div>
+        <div class="field">
+          <label for="message">Message <span class="req">*</span></label>
+          <textarea id="message" name="message" maxlength="1000" required></textarea>
+          <p class="hint">20–1000 characters.</p>
+          <div class="error" data-error-for="message"></div>
+        </div>
+        <button class="btn btn-primary btn-full" type="submit">Send message</button>
+      </form>
+    </main>
+
+    <footer class="site-footer">
+      <span>Smart Blood Bank Management System</span>
+      <span>&copy; <span data-year></span> SEN-311L</span>
+    </footer>
+    <script src="js/validation.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/pages.js"></script>
+  </body>
+</html>
